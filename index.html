@@ -1,0 +1,778 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title> LORD VISHNU</title>
+
+<!-- import external .js scripts here -->
+
+<!-- <script type="text/javascript" src="#" ></script> -->
+
+<!-- modify CSS properties here -->
+
+<style type="text/css">
+body,td,th {
+font-family: Monaco, "Courier New", "monospace";
+font-size: 14px;
+color: rgba(255,255,255,1);
+}
+
+body {
+background-color: rgba(0,0,0,1);
+}
+
+#container {
+position: relative;
+text-align: left;
+width: 95%;
+height: 800px;
+}
+
+#fmxCanvas {
+position: relative;
+background-color:rgba(0,0,0,1.00);
+border: rgba(255,255,255,1) thin dashed;
+margin: 10px;
+cursor: crosshair;
+display: inline-block;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="container">
+<!-- START HTML CODE HERE -->
+
+<canvas id="fmxCanvas" width="800" height="700"></canvas>
+
+<div id="display"></div>
+	
+
+	
+<img src="img1/palm_1.png" id = "palm_1"/>
+	
+<img src="img1/farm_1.png" id = "farm_1"/>
+	
+<img src="img1/Uarm_1.png" id = "uarm_1"/>
+	
+	
+<img src="img1/palm_2.png" id = "palm_2"/>
+	
+<img src="img1/farm_2.png" id = "farm_2"/>
+	
+<img src="img1/uarm_2.png" id = "uarm_2"/>
+	
+	
+<img src="img1/palm_3.png" id = "palm_3"/>
+	
+<img src="img1/farm_3.png" id = "farm_3"/>
+	
+<img src="img1/uarm_3.png" id = "uarm_3"/>
+	
+	
+<img src="img1/palm_4.png" id = "palm_4"/>
+	
+<img src="img1/farm_4.png" id = "farm_4"/>
+	
+<img src="img1/uarm_4.png" id = "uarm_4"/>
+	
+	
+<img src="img1/palm_5.png" id = "palm_5"/>
+	
+<img src="img1/farm_5.png" id = "farm_5"/>
+	
+<img src="img1/uarm_5.png" id = "uarm_5"/>
+	
+	
+<img src="img1/palm_6.png" id = "palm_6"/>
+	
+<img src="img1/farm_6.png" id = "farm_6"/>
+	
+<img src="img1/uarm_6.png" id = "uarm_6"/>
+	
+	
+<img src="img1/palm_7.png" id = "palm_7"/>
+	
+<img src="img1/farm_7.png" id = "farm_7"/>
+	
+<img src="img1/uarm_7.png" id = "uarm_7"/>
+	
+
+	
+<img src="img1/palm_8.png" id = "palm_8"/>
+	
+<img src="img1/farm_8.png" id = "farm_8"/>
+	
+<img src="img1/uarm_8.png" id = "uarm_8"/>
+	
+	
+	
+<img src="img1/body.png" id = "body"/>
+	
+<img src = "img1/face.png" id ="face"/>
+	
+<img src = "img1/middle_hand.png" id ="middle_hand"/>
+	
+<img src = "img1/middle_palm.png" id = "middle_palm"/>
+
+	
+<img src = "img1/vishnu.png" id="bkgd">
+	
+<img src = "img1/bkgd.png" id="bkgd1">
+
+
+Add your personal notes or additional information here
+
+<!-- FINISH HTML CODE HERE -->
+</div>
+
+<script>
+
+///////////////////////////////////////////////////////////////////////
+// DECLARE requestAnimFrame
+
+var rAF = window.requestAnimFrame ||
+window.mozRequestAnimFrame ||
+window.webkitRequestAnimFrame ||
+window.msRequestAnimFrame;
+
+var fps = 30;
+
+window.requestAnimFrame = (
+
+function(callback) {
+
+return rAF ||
+
+function(callback) {
+window.setTimeout(callback, 1000 / fps);
+};
+
+})();
+
+///////////////////////////////////////////////////////////////////////
+// DEFINE GLOBAL VARIABLES HERE
+
+var canvas;
+var ctx;
+canvas = document.getElementById("fmxCanvas");
+ctx = canvas.getContext("2d");
+
+var canvas1;
+var ctx1;
+canvas1 = document.createElement("canvas");
+ctx1 = canvas1.getContext("2d");
+
+canvas1.width = canvas.width;
+canvas1.height = canvas.height;
+
+var canvas2;
+var ctx2;
+canvas2 = document.createElement("canvas");
+ctx2 = canvas2.getContext("2d");
+
+canvas2.width = canvas.width;
+canvas2.height = canvas.height;
+	
+var canvas3;
+var ctx3;
+canvas3 = document.createElement("canvas");
+ctx3 = canvas3.getContext("2d");
+
+canvas3.width = canvas.width;
+canvas3.height = canvas.height;
+	
+var canvas4;
+var ctx4;
+canvas4 = document.createElement("canvas");
+ctx4 = canvas4.getContext("2d");
+
+canvas4.width = canvas.width;
+canvas4.height = canvas.height;
+	
+var canvas5;
+var ctx5;
+canvas5 = document.createElement("canvas");
+ctx5 = canvas5.getContext("2d");
+
+canvas5.width = canvas.width;
+canvas5.height = canvas.height;
+	
+var canvas6;
+var ctx6;
+canvas6 = document.createElement("canvas");
+ctx6 = canvas6.getContext("2d");
+
+canvas6.width = canvas.width;
+canvas6.height = canvas.height;
+	
+var canvas7;
+var ctx7;
+canvas7 = document.createElement("canvas");
+ctx7 = canvas7.getContext("2d");
+
+canvas7.width = canvas.width;
+canvas7.height = canvas.height;
+	
+var canvas8;
+var ctx8;
+canvas8 = document.createElement("canvas");
+ctx8 = canvas8.getContext("2d");
+
+canvas8.width = canvas.width;
+canvas8.height = canvas.height;
+	
+var canvas9;
+var ctx9;
+canvas9 = document.createElement("canvas");
+ctx9 = canvas9.getContext("2d");
+
+canvas9.width = canvas.width;
+canvas9.height = canvas.height;
+
+var canvas10;
+var ctx10;
+canvas10 = document.createElement("canvas");
+ctx10 = canvas10.getContext("2d");
+
+canvas10.width = canvas.width;
+canvas10.height = canvas.height;
+	
+var canvas11;
+var ctx11;
+canvas11 = document.createElement("canvas");
+ctx11 = canvas11.getContext("2d");
+
+canvas11.width = canvas.width;
+canvas11.height = canvas.height;
+	
+var canvas12;
+var ctx12;
+canvas12 = document.createElement("canvas");
+ctx12 = canvas12.getContext("2d");
+
+canvas12.width = canvas.width;
+canvas12.height = canvas.height;
+	
+var canvas13;
+var ctx13;
+canvas13 = document.createElement("canvas");
+ctx13 = canvas13.getContext("2d");
+
+canvas13.width = canvas.width;
+canvas13.height = canvas.height;
+
+
+var display;
+display = document.getElementById('display');
+
+var counter;
+
+///////////////////////////////////////////////////////////////////////
+// DEFINE YOUR GLOBAL VARIABLES HERE
+
+var palm_1 = new Image();
+    palm_1 = document.getElementById('palm_1');
+	
+var farm_1 = new Image();
+    farm_1 = document.getElementById('farm_1');
+	
+var uarm_1 = new Image();
+    uarm_1 = document.getElementById('uarm_1');
+
+var palm_2 = new Image();
+    palm_2 = document.getElementById('palm_2');
+	
+var farm_2 = new Image();
+    farm_2 = document.getElementById('farm_2');
+	
+var uarm_2 = new Image();
+    uarm_2 = document.getElementById('uarm_2');
+	
+var palm_3 = new Image();
+    palm_3 = document.getElementById('palm_3');
+	
+var farm_3 = new Image();
+    farm_3 = document.getElementById('farm_3');
+	
+var uarm_3 = new Image();
+    uarm_3 = document.getElementById('uarm_3');
+	
+var palm_4 = new Image();
+    palm_4 = document.getElementById('palm_4');
+	
+var farm_4 = new Image();
+    farm_4 = document.getElementById('farm_4');
+	
+var uarm_4 = new Image();
+    uarm_4 = document.getElementById('uarm_4');
+
+var palm_5 = new Image();
+    palm_5 = document.getElementById('palm_5');
+	
+var farm_5 = new Image();
+    farm_5 = document.getElementById('farm_5');
+	
+var uarm_5 = new Image();
+    uarm_5 = document.getElementById('uarm_5');
+	
+var palm_6 = new Image();
+    palm_6 = document.getElementById('palm_6');
+	
+var farm_6 = new Image();
+    farm_6 = document.getElementById('farm_6');
+	
+var uarm_6 = new Image();
+    uarm_6 = document.getElementById('uarm_6');
+	
+var palm_7 = new Image();
+    palm_7 = document.getElementById('palm_7');
+	
+var farm_7 = new Image();
+    farm_7 = document.getElementById('farm_7');
+	
+var uarm_7 = new Image();
+    uarm_7 = document.getElementById('uarm_7');
+	
+var palm_8 = new Image();
+    palm_8 = document.getElementById('palm_8');
+	
+var farm_8 = new Image();
+    farm_8 = document.getElementById('farm_8');
+	
+var uarm_8 = new Image();
+    uarm_8 = document.getElementById('uarm_8');
+	
+	
+var face = new Image();
+    face = document.getElementById('face');
+	
+var body = new Image();
+    body = document.getElementById('body');
+	
+	
+var middle_hand = new Image();
+    middle_hand = document.getElementById('middle_hand');
+	
+var middle_palm = new Image();
+    middle_palm = document.getElementById('middle_palm');
+
+///////////////////////////////////////////////////////////////////////
+// CALL THE EVENT LISTENERS
+
+window.addEventListener("load", setup, false);
+
+//////////////////////////////////////////////////////////////////////
+// ADD EVENT LISTENERS
+
+canvas.addEventListener("mousemove", mousePos, false);
+
+//////////////////////////////////////////////////////////////////////
+// MOUSE COORDINATES
+
+var stage, mouseX, mouseY;
+
+function mousePos(event) {
+stage = canvas.getBoundingClientRect();
+mouseX = event.clientX - stage.left;
+mouseY = event.clientY - stage.top;
+}
+
+/////////////////////////////////////////////////////////////////////
+// INITIALIZE THE STARTING FUNCTION
+
+function setup() {
+
+/////////////////////////////////////////////////////////////////////
+// DECLARE STARTING VALUES OF GLOBAL VARIABLES
+
+counter = 0;
+mouseX = canvas.width/2;
+mouseY = canvas.height/2;
+
+/////////////////////////////////////////////////////////////////////
+// CALL SUBSEQUENT FUNCTIONS, as many as you need
+
+clear(); // COVER TRANSPARENT CANVAS OR CLEAR CANVAS
+
+draw(); // THIS IS WHERE EVERYTHING HAPPENS
+
+}
+
+////////////////////////////////////////////////////////////////////
+// CLEAR THE CANVAS FOR ANIMATION
+// USE THIS AREA TO MODIFY BKGD
+
+function clear() {
+
+ctx.clearRect(0,0,canvas.width, canvas.height);
+ctx1.clearRect(0,0,canvas.width, canvas.height);
+ctx2.clearRect(0,0,canvas.width, canvas.height);
+ctx3.clearRect(0,0,canvas.width, canvas.height);
+ctx4.clearRect(0,0,canvas.width, canvas.height);
+ctx5.clearRect(0,0,canvas.width, canvas.height);
+ctx6.clearRect(0,0,canvas.width, canvas.height);
+ctx7.clearRect(0,0,canvas.width, canvas.height);
+ctx8.clearRect(0,0,canvas.width, canvas.height);
+ctx9.clearRect(0,0,canvas.width, canvas.height);
+ctx10.clearRect(0,0,canvas.width, canvas.height);
+	ctx11.clearRect(0,0,canvas.width, canvas.height);
+	ctx12.clearRect(0,0,canvas.width, canvas.height);
+ctx13.clearRect(0,0,canvas.width, canvas.height);
+
+// clear additional ctxs here if you have more than canvas1
+
+}
+
+////////////////////////////////////////////////////////////////////
+// THIS IS WHERE EVERYTHING HAPPENS
+
+function draw() {
+
+counter += 0.1; // EASIER FOR SINE COSINE FUNCTIONS
+
+if (counter > Math.PI*200) { counter = 0; } // RESET COUNTER
+
+clear(); // USE THIS TO REFRESH THE FRAME AND CLEAR CANVAS
+
+////////////////////////////////////////////////////////////////////
+// >>>START HERE>>>START HERE>>>START HERE>>>START HERE>>>START HERE
+
+
+
+ctx.drawImage(bkgd1,0,0); 
+
+	
+	ctx.save();
+	ctx.filter ="blur(100px)";
+	ctx.beginPath();
+	ctx.arc(404,208,mouseX/4 +0.5,0,2*Math.PI);
+	ctx.closePath();
+	ctx.fillStyle= "rgba(253,253,59,0.72)";
+	ctx.fill();
+	ctx.restore();
+	
+	
+var sin, cos;
+    
+sin = Math.sin(counter);
+    
+cos = Math.cos(counter);
+
+//------- ARM 1 --------//
+	
+	////// PALM_1 ///////
+	
+	
+	ctx1.save();
+	ctx1.beginPath();
+	ctx1.translate(588,189);//-40,-130
+	ctx1.rotate(0 + sin/10);
+	ctx1.drawImage(palm_1,-40,-130);//588, 190\
+	ctx1.closePath();
+	ctx1.restore();
+	
+	
+	ctx1.save();
+	//ctx.translate(544,287);
+	ctx1.drawImage(farm_1,514,147);
+	ctx1.restore();
+	
+	
+	ctx2.save();
+	ctx2.drawImage(uarm_1,466,231);
+	ctx2.restore();
+	
+	ctx2.save();
+	ctx2.beginPath();
+	ctx2.translate(540,288);
+	ctx2.rotate(0 + cos/10);
+	ctx2.drawImage(canvas1,-540,-285);//540,288
+	ctx2.closePath();
+	ctx2.restore();
+	
+	ctx.save();
+	ctx.beginPath();
+	ctx.translate(497,301);
+	ctx.rotate(0 + sin/10);
+	ctx.drawImage(canvas2,-495,-300);//
+	ctx.closePath();
+	ctx.restore();
+	
+ 
+//------- ARM 2 --------//
+ 
+	ctx3.save();
+	ctx3.beginPath();
+	ctx3.translate(642,265);
+	ctx3.rotate(cos/10);
+	ctx3.drawImage(palm_2,-36,-100);//
+	ctx3.closePath();
+	ctx3.restore();
+	
+	ctx3.save();
+	ctx3.drawImage(farm_2,543,225);
+	ctx3.restore();
+	
+	ctx.save();
+	ctx.drawImage(uarm_2,474,276);
+	ctx.restore();
+	
+	
+	ctx.save();
+	ctx.beginPath();
+	ctx.translate(556,346);
+	ctx.rotate(cos/10);
+	ctx.drawImage(canvas3,-570,-340);//
+	ctx.closePath();
+	ctx.restore();
+ 
+//------- ARM 3 --------//
+	
+	ctx4.save();
+	ctx4.beginPath();
+	ctx4.translate(652, 343);
+	ctx4.rotate(0+cos/5);
+	ctx4.drawImage(palm_3,-20,-100);
+	ctx4.closePath();
+	ctx4.restore();
+	
+	ctx4.save();
+	ctx4.drawImage(farm_3,535,294);
+	ctx4.restore();
+	
+	ctx.save();
+	ctx.drawImage(uarm_3,467,297);
+	ctx.restore();
+ 	
+	ctx.save();
+	ctx.beginPath();
+	ctx.translate(563,389);
+	ctx.rotate(0+cos/10);
+	ctx.drawImage(canvas4,-560,-390);
+	ctx.closePath();
+	ctx.restore();
+
+//------- ARM 4 --------//
+	
+	ctx5.save();
+	ctx5.beginPath();
+	ctx5.translate(642,433);
+	ctx5.rotate(cos/10);
+	ctx5.drawImage(palm_4,-35,-35);
+	ctx5.closePath();
+	ctx5.restore();
+	
+	ctx5.save();
+	ctx5.drawImage(farm_4,508,375);
+	ctx5.restore();
+	
+	ctx.save();
+	ctx.drawImage(uarm_4,505,351);
+	ctx.restore(); 
+	
+	ctx.save();
+	ctx.beginPath();
+	ctx.translate(551,430);
+	ctx.rotate(sin/10);
+	ctx.drawImage(canvas5,-550,-430);
+	ctx.closePath();
+	ctx.restore();
+
+//------- ARM 5 --------//
+	
+	ctx6.save();
+	ctx6.beginPath();
+	ctx6.translate(200,197);
+	ctx6.rotate(sin/10);
+	ctx6.drawImage(palm_5,-70,-110);
+	ctx6.closePath();
+	ctx6.restore();
+	
+	ctx6.save();
+	ctx6.drawImage(farm_5,162,157);
+	ctx6.restore();
+	
+	//change them if you want to move whole
+	ctx.save();
+	ctx.drawImage(uarm_5,201,228);
+	ctx.restore();
+	
+	ctx.save();
+	ctx.beginPath();
+	ctx.translate(255,297);
+	ctx.rotate(cos/10);
+	ctx.drawImage(canvas6,-255,-300);
+	ctx.closePath();
+	ctx.restore();
+
+//------- ARM 6 --------//
+	
+	ctx7.save();
+	ctx7.beginPath();
+	ctx7.translate(158,264);
+	ctx7.rotate(sin/10);
+	ctx7.drawImage(palm_6,-65,-100);
+	ctx7.closePath();
+	ctx7.restore();
+	
+	ctx7.save();
+	ctx7.drawImage(farm_6,116,206);
+	ctx7.restore();
+	
+	ctx.save();
+	ctx.drawImage(uarm_6,161,289);
+	ctx.restore();
+	
+	ctx.save();
+	ctx.beginPath();
+	ctx.translate(218,340);
+	ctx.rotate(cos/10);
+	ctx.drawImage(canvas7,-220,-340);
+	ctx.closePath();
+	ctx.restore();
+	
+//------- ARM 7 --------//
+	
+	ctx8.save();
+	ctx8.beginPath();
+	ctx8.translate(161,340);
+	ctx8.rotate(cos/10);
+	ctx8.drawImage(palm_7,-100,-60);
+	ctx8.closePath();
+	ctx8.restore();
+	
+	ctx8.save();
+	ctx8.drawImage(farm_7,119,305);
+	ctx8.restore();
+	
+	ctx.save();
+	ctx.drawImage(uarm_7,181,329);
+	ctx.restore();
+	
+	ctx.save();
+	ctx.beginPath();
+	ctx.translate(235,377);
+	ctx.rotate(sin/10);
+	ctx.drawImage(canvas8,-240,-380);
+	ctx.closePath();
+	ctx.restore();
+	
+//------- ARM 7 --------//
+	
+	
+	ctx9.save();
+	ctx9.beginPath();
+	ctx9.translate(156,461);
+	ctx9.rotate(cos/10);
+	ctx9.drawImage(palm_8,-110,-70);
+	ctx9.closePath();
+	ctx9.restore();
+	
+	ctx9.save();
+	ctx9.drawImage(farm_8,108,374);
+	ctx9.restore();
+	
+	ctx10.save();
+	ctx10.drawImage(uarm_8,217,304);
+	ctx10.restore()
+	
+	ctx10.save();
+	ctx10.beginPath();
+	ctx10.translate(259,420);
+	ctx10.rotate(sin/10);
+	ctx10.drawImage(canvas9,-260,-420);
+	ctx10.closePath();
+	ctx10.restore();
+	
+	ctx.save();
+	ctx.beginPath();
+	ctx.translate(311,329);
+	ctx.rotate(cos/20);
+	ctx.drawImage(canvas10,-310,-330);
+	ctx.closePath();
+	ctx.restore();
+	
+	
+//------- body --------//	
+	ctx.save();
+	ctx.beginPath();
+	ctx.drawImage(body,170,237);
+	ctx.closePath();
+	ctx.restore();
+	
+	
+//------- face --------//	
+	
+ 	ctx.save();
+	ctx.beginPath();
+	ctx.translate(406,248);
+	ctx.rotate(sin/20);
+	ctx.drawImage(face,-130,-210);
+	ctx.closePath();
+	ctx.restore();
+	
+//------- middle hand --------//
+	
+	ctx11.save();
+	ctx11.drawImage(middle_hand,424,334);
+	ctx11.restore();
+	
+	ctx11.save();
+	ctx11.beginPath();
+	ctx11.translate(481,381);
+	ctx11.rotate( sin/9);
+	ctx11.drawImage(middle_palm,-50,-100);
+	ctx11.closePath();
+	ctx11.restore();
+	
+	ctx.save();
+	ctx.beginPath();
+	ctx.translate(497,443);
+	ctx.rotate(cos/10);
+	ctx.drawImage(canvas11,-500,-450);
+	ctx.closePath();
+	ctx.restore();
+	
+	
+	
+
+	
+	
+	
+// <<<END HERE<<<END HERE<<<END HERE<<<END HERE<<<END HERE<<<END HERE
+///////////////////////////////////////////////////////////////////
+
+// CREDITS
+
+ctx.save();
+var credits = "Sneha Patel, LORD VISHNU, FMX 310, SP 2025";
+ctx.font = 'bold 12px Helvetica';
+ctx.fillStyle = "rgba(0,0,0,1)"; // change the color here
+ctx.shadowColor = "rgba(255,255,255,1)"; // change shadow color here
+ctx.shadowBlur = 12;
+ctx.shadowOffsetX = 2;
+ctx.shadowOffsetY = 2;
+ctx.fillText(credits, 10, canvas.height - 10); // CHANGE THE LOCATION HERE
+ctx.restore();
+
+//////////////////////////////////////////////////////////////////
+// HTML DISPLAY FIELD FOR TESTING PURPOSES
+
+display.innerHTML = Math.round(mouseX) + " || " + Math.round(mouseY) + " || counter = " + Math.round(counter);
+
+/////////////////////////////////////////////////////////////////
+// LAST LINE CREATES THE ANIMATION
+
+requestAnimFrame(draw); // CALLS draw() every nth of a second
+
+}
+
+</script>
+
+</body>
+</html>
